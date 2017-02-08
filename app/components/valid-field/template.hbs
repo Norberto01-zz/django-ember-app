@@ -1,0 +1,18 @@
+
+<div class="{{if hasError 'has-error'}} form-group">
+  <!--key-up=(action "validFields")-->
+  {{input type=type placeholder=placeholder class="form-control"
+          name=valuePath value=value data-id=valuePath required=required}}
+</div>
+{{#if isValid}}
+    <span class="fa fa-spin fa-spinner form-control-feedback"></span>
+{{/if}}
+
+{{#if showMessage}}
+    <div class="input-error">
+        <span class="fa fa-trash form-control-feedback" aria-hidden="true"></span>
+        <div class="help-block has-error">
+            {{v-get valuePath 'message'}}
+        </div>
+    </div>
+{{/if}}

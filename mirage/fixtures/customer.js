@@ -1,0 +1,32 @@
+export default [
+  {
+    id: 1,
+    name: 'Luis Jimenez',
+    phone: '8491234568',
+    email: 'luisji@gmail.com',
+    active: true,
+    signup_token: '123456789987654321',
+    created_date: '2016-11-26 14:04:24.080094',
+    write_date: '2016-11-26 15:04:24.080094',
+  },
+  {
+    id: 2,
+    name: 'Pedro Vargas',
+    phone: '8491234568',
+    email: 'pedrov@gmail.com',
+    active: true,
+    signup_token: '123456789987654321',
+    created_date: '2016-11-26 14:04:24.080094',
+    write_date: '2016-11-26 15:04:24.080094',
+  },
+  {
+    id: 3,
+    name: 'Manuel Gonzalez',
+    phone: '8491234568',
+    email: 'manuel@gmail.com',
+    active: true,
+    signup_token: '123456789987654321',
+    created_date: '2016-11-26 14:04:24.080094',
+    write_date: '2016-11-26 15:04:24.080094',
+  },
+];

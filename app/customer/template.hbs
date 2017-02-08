@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Customers List</h2>
+    <div class="block">
+        <button data-toggle="modal" data-target="#new-customer"
+                class="btn btn-primary active">New Account</button>
+
+        {{#if responseMessage}}
+            <div class="alert alert-success">{{responseMessage}}</div>
+        {{/if}}
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-sm-2"><strong>Name</strong></div>
+                <div class="col-sm-2"><strong>Phone</strong></div>
+                <div class="col-sm-2"><strong>Email</strong></div>
+                <div class="col-sm-1"><strong>Active</strong></div>
+                <div class="col-sm-3"><strong>Action</strong></div>
+            </div>
+        </li>
+        {{#each model.customers as |item|}}
+            <li class="list-group-item">
+                {{customer-listing customer=item}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+{{partial 'new-customer' }}
+

@@ -1,0 +1,13 @@
+{{#if sliders }}
+  <div class="touch-slider" >
+    <ul>
+      {{#each sliders as |item|}}
+        <li class="list-item">
+          <div class="row">
+            {{show-picture id=item.id name=fileRepo field='picture' height='500' }}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}

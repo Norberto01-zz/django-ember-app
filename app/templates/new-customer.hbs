@@ -1,0 +1,39 @@
+<div id="new-customer" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form {{action 'saveCustomer' on='submit'}}>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title">Register New Account</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name-field">Name:</label>
+                        {{input type="text" value=nameField class="form-control" id="name-field" maxlength="60"
+                                placeholder="Type your name" autofocus="autofocus" required="required"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-field">Phone:</label>
+                        {{input type="text" value=phoneField class="form-control" id="phone-field" maxlength="15"
+                              placeholder="Type your phone" required="required"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="email-field">Email:</label>
+                        {{input type="email" value=emailField class="form-control" id="email-field" maxlength="80"
+                                placeholder="Type your email" required="required"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd-field">Password:</label>
+                        {{input type="password" value=pwdField class="form-control" id="pwd-field" minlength="6"
+                                maxlength="15" placeholder="Enter password" required="required"}}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary"  disabled={{isDisabled}}>Submit</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

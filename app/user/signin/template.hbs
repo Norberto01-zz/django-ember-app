@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="card card-container">
+        {{#if errorMessage}}
+            <div class="alert alert-danger">{{errorMessage}}</div>
+        {{/if}}
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+
+        <form {{action "authenticate"  on="submit"}} class="form-signin">
+            <span id="reauth-email" class="reauth-email"></span>
+
+            <div class="input-group">
+               <span class="input-group-addon" >{{fa-icon "envelope-o fa-fw" }}</span>
+              {{input type="email" value=inputIdentification class="form-control input" id="input-email" maxlength="80"
+                      placeholder="Email address" required="required" }}
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">{{fa-icon "key fa-fw" }}</span>
+                {{input type="password" value=inputPassword class="form-control input" id="input-password"
+                        placeholder="Password" required="required" }}
+            </div>
+
+            <div id="remember" class="checkbox">
+                <label>
+                    {{input type="checkbox" name="rememberMe" }} Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+        </form><!-- /form -->
+        <a href="#" class="forgot-password">
+            Forgot the password?
+        </a>
+    </div><!-- /card-container -->
+</div><!-- /container -->
